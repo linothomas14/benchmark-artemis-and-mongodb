@@ -1,0 +1,19 @@
+artemis:
+  host: localhost
+  port: 61616
+  user: root
+  password: root
+  queue_name: queue-msg
+  number_of_data: 5000
+mongodb:
+  host: localhost
+  port: 27017
+  username: admin
+  password: admin
+  database: test-benchmark
+  max_pool_size: 10
+  connect_timeout: 5
+  auth_source: admin
+  collection: queue-msg
+  number_of_data: 5000
+  
