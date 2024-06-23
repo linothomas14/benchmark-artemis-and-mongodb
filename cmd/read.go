@@ -47,13 +47,14 @@ to quickly create a Cobra application.`,
 
 		// go func() {
 		// 	wg.Wait()
-		// 	close(stopChannel)
+		//
 		// }()
 
 		// MENERIMA DATA DARI CHANNEL, JIKA ADA DATA, HENTIKAN PROGRAM
 		for range stopChannel {
 			messageCount++
 			if messageCount >= util.Configuration.Artemis.NumberOfData {
+				close(stopChannel)
 				break
 			}
 		}
